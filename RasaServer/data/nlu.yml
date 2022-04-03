@@ -1,0 +1,279 @@
+version: "2.0"
+
+nlu:
+- lookup: topic
+  examples: |
+    - constructor
+    - variables
+    - arraylist
+    - global variables
+    - array
+    - libraries
+    - importing
+    - maps
+    - coupling
+    - loose coupling
+    - tight coupling
+    - encapsulation
+    - cohesion
+    - responsibility driven design
+    - localising change
+    - code duplication
+    - enumerated types
+    - refactoring
+    - version control
+    - unit testing
+    - junit
+    - inheritance
+    - subclasses and subtyping
+    - casting
+    - polymorphic variables
+    - polymorphic collections
+    - polymorphism
+
+- synonym: arraylist
+  examples: |
+    - array list
+    - arraylists
+    - list array
+
+- synonym: libraries
+  examples: |
+    - class libraries
+    - java classes
+    - java class libraries
+
+- synonym: importing
+  examples: |
+    - packages
+    - imports
+    - packages list
+    - imports list
+
+- synonym: maps
+  examples: |
+    - mapping
+    - hash map
+    - hash maps
+
+- synonym: responsibility driven design
+  examples: |
+    - RRD
+    - driven design
+    - responsibility design
+
+- synonym: localising change
+  examples: |
+    - localise change
+
+- synonym: code duplication
+  examples: |
+    - duplication
+
+- synonym: enumerated types
+  examples: |
+    - enum
+    - enum types
+
+- synonym: refactoring
+  examples: |
+    - refactorisation
+
+- synonym: version control
+  examples: |
+    - versioning
+    - versions
+
+- synonym: subclasses and subtyping
+  examples: |
+    - subclasses
+    - subtyping
+
+- synonym: junit
+  examples: |
+    - Junit
+    - JUnit
+    - Junit testing
+    - junit testing
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: ask_bot_about_feelings
+  examples: |
+    - How are you?
+    - good you?
+    - gud you
+    - good u
+    - good u?
+    - I'm great! What about you?
+    - fantastic, you?
+    - How is your day!
+    - are you good?
+    - how are you feeling today?
+    - how has today been
+
+- intent: get_to_work_good
+  examples: |
+    - good
+    - I'm good
+    - I'm great!
+    - fantastic
+    - amazing
+
+- intent: get_to_work_sad
+  examples: |
+    - sad
+    - bad
+    - tired
+    - not good
+    - not gud
+    - very tired
+    - very sad
+
+- intent: thank_you
+  examples: |
+    - thank you
+    - thank u
+    - appreciate it
+    - thanks
+    - thx
+    - thxs
+    - cheers
+    - Thank you! :)
+
+- intent: offer_help
+  examples: |
+    - can you help me
+    - I need help
+    - can you find something for me?
+    - Could you heelp me understand
+    - help
+    - Can you help?
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you real?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - what is this?
+
+- intent: existential_reasoning
+  examples: |
+    - what can you do?
+    - what do you do?
+    - what is your purpose?
+    - why exist?
+    - tell me what you do
+    - what is your purpose?
+    - why were you created
+
+- intent: lectures_and_labs
+  examples: |
+    - lecture
+    - lab
+    - lecture information
+    - lab information
+    - when is my lab?
+    - when is my lecture?
+    - lecture times?
+    - lab times?
+    - what time is my lecture?
+    - what time is my lab?
+
+- intent: coursework
+  examples: |
+    - coursework
+    - assessment
+    - what is the coursework?
+    - when is the coursework due?
+    - what is assessed?
+
+- intent: lecturer
+  examples: |
+    - lecturer
+    - course
+    - what course is this?
+    - who teaches this course?
+    - what lecturer teaches this?
+    - software development 2
+    - who teaches software development 2?
+    - my lecturer?
+
+- intent: ask_question
+  examples: |
+    - [casting](topic)
+    - [cohesion](topic)
+    - [responsibility driven design](topic)
+    - [localising change](topic)
+    - [enumerated types](topic)
+    - [refactoring](topic)
+    - [code duplication](topic)
+    - [encapsulation](topic)
+    - what is a [constructor](topic)
+    - define a [constructor](topic)
+    - define a [encapsulation](topic)
+    - [arraylist](topic)
+    - what is a [arraylist](topic)
+    - why use [arraylist](topic)
+    - when to use [variables](topic)
+    - when to use [global variables](topic)?
+    - why use [version control](topic)
+    - when to use [version control](topic)
+    - tell me about [version control](topic)
+    - tell me about [variables](topic)
+    - tell me about [global variable](topic)
+    - what does a [global variable](topic) do?
+    - how can I avoid [code duplication](topic)?
+    - why avoid [code duplication](topic)?
+    - what does [casting](topic) do?
+    - is [polymorphism](topic) useful?
+    - what is [responsibility driven design](topic)?
+    - what is [RRD](topic)?
+    - why use [mapping](topic)?
+    - What are [hash maps](topic)?
+    - Should I use [refactorisation](topic)?
+    - should I start use [versioning](topic)
+    - why use [versioning](topic)?
+    - what are [array lists](topic)
+    - Why do I need to avoid [duplication](topic)
+    - how do I import [java classes](topic)
+    - what is [Junit testing](topic)?
+    - what is [junit testing](topic)
+
+- intent: query_suggestions
+  examples: |
+    - What do you know?
+    - what do you do 
+    - what can you do?
+    - how can you help me?
+    - Show me all

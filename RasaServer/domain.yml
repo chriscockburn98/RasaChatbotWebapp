@@ -1,0 +1,74 @@
+version: "2.0"
+
+intents:
+  - greet
+  - ask_bot_about_feelings
+  - get_to_work_good
+  - get_to_work_sad
+  - thank_you
+  - offer_help
+  - goodbye
+  - bot_challenge
+  - existential_reasoning
+  - lectures_and_labs
+  - coursework
+  - lecturer
+  - ask_question
+
+actions: 
+  - action_hello_world
+  - action_ask_question
+
+entities:
+  - topic
+
+slots:
+  topic:
+    type: text
+    influence_conversation: true
+
+responses:
+  utter_greet:
+  - text: '{{ "response_utter": "utter_greet", "response": "Hey! How are you?" }}'
+
+  utter_ask_bot_about_feelings:
+  - text: '{{ "response_utter": "utter_ask_bot_about_feelings", "response": "I am great! Ready to help with any query you have." }}'
+
+  utter_get_to_work_good:
+  - text: '{{ "response_utter": "utter_get_to_work_good", "response": "Thats great! Lets get to work :)" }}'
+
+  utter_get_to_work_bad:
+  - text: '{{ "response_utter": "utter_get_to_work_bad", "response": "Hmm, maybe some Software Development Revision would help!" }}'
+
+  utter_thank_you:
+  - text: '{{ "response_utter": "utter_thank_you", "response": "No problem! I am here if you need me :)" }}'
+
+  utter_offer_help:
+  - text: '{{ "response_utter": "utter_offer_help", "response": "Yes! That is my purpose. Ask me anything, example: `Who teaches this course?`, `What is JUnit Testing?`, `why avoid code duplication`" }}'
+
+  utter_goodbye:
+  - text: '{{ "response_utter": "utter_goodbye", "response": "Bye, Keep progressing!" }}'
+
+  utter_iamabot:
+  - text: '{{ "response_utter": "utter_iamabot", "response": "I am your Software Development 2 bot, powered by Rasa." }}'
+
+  utter_existential_reasoning:
+  - text: '{{ "response_utter": "utter_existential_reasoning", "response": "I am here as your Software Development 2 coursebot! Ask me questions about your course! Ask me anything, example: `Who teaches this course?`, `What is JUnit Testing?`, `why avoid code duplication`" }}'
+
+  utter_lecture_and_labs:
+  - text: '{{ "response_utter": "utter_lecture_and_labs", "response": "You have labs at 14:00 - 16:00 on Thursdays and 10:00 - 12:00 on Fridays. \n You also have lectures 14:00 - 15:00 on Fridays." }}'
+  
+  utter_coursework:
+  - text: '{{ "response_utter": "utter_coursework", "response": "Heres a link to help! \n https://vision.hw.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_106139_1&content_id=_3531923_1" }}'
+
+  utter_lecturer:
+  - text: '{{ "response_utter": "utter_lecturer", "response": "This is Software Development 2 and your lecturer is Dr Christian Dondrup!" }}'
+
+  utter_query_suggestions:
+  - text: '{{ "response_utter": "utter_query_suggestions", "response": "Here are some suggestions: Define inheritance, What is cohesion, How should I avoid code duplication" }}'
+  - text: '{{ "response_utter": "utter_query_suggestions", "response": "Here are some suggestions: Why should I use encapsulation, Who teaches this course, what is version control" }}'
+  - text: '{{ "response_utter": "utter_query_suggestions", "response": "Here are some suggestions: When to use polymorphism, what is coupling, what is RRD" }}'
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false

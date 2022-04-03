@@ -1,0 +1,74 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_bot_about_feelings
+  - action : utter_ask_bot_about_feelings
+
+- story: happy path get to work
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: get_to_work_good
+  - action : utter_get_to_work_good
+
+- story: sad path get to work
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: get_to_work_sad
+  - action : utter_get_to_work_bad
+
+- story: thank you
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
+
+- story: offer help
+  steps:
+  - intent: offer_help
+  - action: utter_offer_help
+
+- story: goodbye path
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: existential reasoning
+  steps:
+  - intent: existential_reasoning
+  - action: utter_existential_reasoning
+
+- story: lecture and labs
+  steps: 
+  - intent: lectures_and_labs
+  - action: utter_lecture_and_labs
+
+- story: coursework
+  steps:
+  - intent: coursework
+  - action: utter_coursework
+
+- story: lecturer
+  steps:
+  - intent: lecturer
+  - action: utter_lecturer
+
+- story: ask question
+  steps:
+  - intent: ask_question
+  - action: action_ask_question
+
+- story: query suggestions
+  steps:
+  - intent: query_suggestions
+  - action: utter_query_suggestions

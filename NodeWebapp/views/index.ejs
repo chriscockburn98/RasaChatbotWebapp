@@ -1,0 +1,74 @@
+<html>
+<head>
+  <title>Classbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
+
+  <script defer type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+  <script defer type="text/javascript" src="/js/js.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/ChatboxStyle.css">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <script defer type="text/javascript" src="js/materialize.min.js"></script>
+    
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script defer src="https://kit.fontawesome.com/63619a1d34.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper" style="background-color: #69a9e9;">
+      <a href="/chatbot" class="brand-logo" style="text-decoration: none; padding-left: 30px;">ClassBot</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger" style="text-decoration: none;"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <form action="/logout" method="POST">
+            <input style="border:none; background-color:transparent; outline:none; color: white; padding-right: 30px;" type="submit" name="submit" value="Logout"/>
+          </form>	
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li>
+      <form action="/logout" method="POST">
+        <input style="border:none; background-color:transparent; outline:none; color: black;" type="submit" name="submit" value="Logout"/>
+      </form>	
+    </li>
+  </ul>
+
+
+  <div style="display: flex; flex-direction: column; justify-content: center;">
+    <div style="display: flex; flex: 1; flex-direction: row; justify-content: center;">
+      <div style="display: flex; flex: 1; flex-direction: column; justify-content: center; z-index: 0;">
+        <div class="card message-box">
+          <div style="width: 100%; height: 100%; overflow: hidden;">
+            <ul id="messaging_container" style="z-index: 10; list-style-type: none; margin: 0px; padding: 0px; height: 100%; width: 100%; overflow-y: scroll; padding-right: 21px; box-sizing: content-box;">
+            </ul>
+            <div id="bot-image-container">
+              <i class='fa fa-robot' style='font-size:124px; color:rgb(248, 248, 248)'></i>
+            </div>
+          </div>
+        </div>
+        <div class="container" id="input-container">
+          <div class="flex" style="margin-left: auto; margin-right: auto;">
+            <textarea  maxlength="300" autofocus class="form-control" style="width: 90%; font-size: 14px; height: 50px; min-height: 50px;" name="query" id="queryTextArea" rows="3" placeholder="Write something here..."></textarea>
+            <button class="btn btn-primary" style="width: 10%; min-width: 60px; height: 50px;" type="submit" onclick="sendQuery()">
+              <i class="fa fa-paper-plane" style="font-size:24px"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
