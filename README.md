@@ -1,3 +1,5 @@
+My academic paper explaining the research involved and the logical thinking behind my design choices:
+https://drive.google.com/file/d/1SoTotH9hGK99cEqkuWZHbYXirXbXrGEm/view?usp=sharing
 
 # Rasa Chatbot Webapp
 Node JS / Express.js / Rasa / EJS Chatbot webapp
